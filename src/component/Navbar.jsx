@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const navigator = useNavigate();
+  const logoutHandler = () => {
+    dispatch(logout());
+    navigator('/')
+  }
   return (
     <nav className="bg-gray-800 text-white px-4 py-3 flex justify-between items-center">
       {/* Logo */}

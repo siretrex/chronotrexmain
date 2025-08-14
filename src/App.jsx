@@ -19,7 +19,7 @@ function App() {
     <>
      <div className="w-full min-h-screen  text-white flex flex-col">
           <div className="flex-1">
-            {userId ? <Navbar/> : <></>}
+            { !userId ? <Navbar/> : <></>}
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />

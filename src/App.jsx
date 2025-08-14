@@ -13,11 +13,13 @@ import { useSelector } from 'react-redux'
 import './App.css'
 
 function App() {
+   const userId = useSelector((state) => state.user?.user?._id)
 
   return (
     <>
-     <div className="w-full min-h-screen pt-[60px] text-white flex flex-col">
+     <div className="w-full min-h-screen  text-white flex flex-col">
           <div className="flex-1">
+            {userId ? <Navbar/> : <></>}
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />

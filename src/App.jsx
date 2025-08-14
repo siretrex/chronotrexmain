@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-     <div className="w-full min-h-screen  text-white flex flex-col">
+     <div className="w-full min-h-screen bg-gray-800  text-white flex flex-col">
           <div className="flex-1">
             { !userId ? <Navbar/> : <></>}
             <Routes>
@@ -26,7 +26,7 @@ function App() {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/addtask" element={<Protected Element={Addnewtask} />} />
               <Route path="/home" element={<Protected Element={HeroPage} />} />
-              <Route path="/showtasks" element={<Protected Element={Showtasks} />} />
+              <Route path="/showtask" element={<Protected Element={Showtasks} />} />
             </Routes>
           </div>
           </div>

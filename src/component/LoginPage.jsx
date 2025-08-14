@@ -29,7 +29,7 @@ const LoginPage = () => {
       });
       const user = { user: response.data.user, token: response.data.token };
       dispatch(login(user));
-      navigator('/chronotrex-x/home')
+      navigator('/home')
     } catch {
       setError("Invalid email or password.");
     } finally {
@@ -91,7 +91,7 @@ const LoginPage = () => {
 
         <p className="text-center mt-4 text-gray-300">
           Don't have an account?{" "}
-          <Link to="/chronotrex-x/register" className="text-violet-400 hover:underline">
+          <Link to="/register" className="text-violet-400 hover:underline">
             Register
           </Link>
         </p>

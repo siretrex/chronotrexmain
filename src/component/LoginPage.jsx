@@ -29,7 +29,7 @@ const LoginPage = () => {
       });
       const user = { user: response.data.user, token: response.data.token };
       dispatch(login(user));
-      navigator('/home')
+      navigator('/')
     } catch {
       setError("Invalid email or password.");
     } finally {

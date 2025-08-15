@@ -4,13 +4,16 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const userId = useSelector((state) => state.user?.user?._id)
   const dispatch = useDispatch();
   const navigator = useNavigate();
   const logoutHandler = () => {
     dispatch(logout());
   }
   return (
-    <nav className="bg-gray-800 text-white px-4 py-3 flex justify-between items-center">
+    <>
+    {
+      userId ? <nav className="bg-gray-800 text-white px-4 py-3 flex justify-between items-center">
       {/* Logo */}
       <div className="text-base sm:text-xl font-bold">
         <Link to="/">Chronotrex</Link>
@@ -37,7 +40,12 @@ const Navbar = () => {
           Logout
         </Link>
       </div>
+    </nav> : <nav>
+      Chronotrex
     </nav>
+    }
+    </>
+    
   );
 };
 

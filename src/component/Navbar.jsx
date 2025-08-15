@@ -9,6 +9,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigator = useNavigate();
   const logoutHandler = () => {
+    alert("Logout")
     dispatch(logout());
   }
   return (

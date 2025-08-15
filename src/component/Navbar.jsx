@@ -31,7 +31,6 @@ const Navbar = () => {
           Show Task
         </Link>
         <Link
-          to="/logout"
           onClick={logoutHandler}
           className="hover:text-gray-300 transition duration-200"
         >

@@ -7,7 +7,7 @@ const Protected = ({ Element }) => {
   const userId = useSelector((state) => state.user?.user?._id);
 
   if (!userId) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return (

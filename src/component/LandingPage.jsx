@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const LandingPage = () => {
+  const userId = useSelector((state) => state.user?.user?._id)
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#222] to-[#1a1a1a] text-white">
       {/* Hero Section */}

@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="bg-gray-800 text-white px-4 py-3 flex justify-between items-center">
       {/* Logo */}
       <div className="text-base sm:text-xl font-bold">
-        <Link to="/home">Chronotrex</Link>
+        <Link to="/">Chronotrex</Link>
       </div>
 
       {/* Links */}

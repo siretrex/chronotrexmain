@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import HeroPage from "../../../../chronotrex/client/src/component/HeroPage";
+import HeroPage from './HeroPage'
 
 const LandingPage = () => {
   const userId = useSelector((state) => state.user?.user?._id)

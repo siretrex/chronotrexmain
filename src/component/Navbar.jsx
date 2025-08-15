@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const userId = useSelector((state) => state.user?.user?._id)

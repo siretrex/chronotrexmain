@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import HeroPage from "../../../../chronotrex/client/src/component/HeroPage";
 
 const LandingPage = () => {
   const userId = useSelector((state) => state.user?.user?._id)
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#222] to-[#1a1a1a] text-white">
+    <>
+    {
+      !userId ? <div className="w-full min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#222] to-[#1a1a1a] text-white">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
         
@@ -62,6 +65,12 @@ const LandingPage = () => {
         </div>
       </div>
     </div>
+
+    :
+
+    <HeroPage />
+    }
+    </>
   );
 };
 

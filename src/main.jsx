@@ -10,8 +10,8 @@ import LoginPage from './component/LoginPage.jsx';
 import Protected from './component/Protected.jsx';
 import RegisterPage from './component/RegisterPage.jsx';
 import Addnewtask from './component/Addnewtask.jsx'
-import Showtasks from './component/Showtasks.jsx'
-import LandingPage from '../../../chronotrex/client/src/component/LandingPage.jsx';
+import Showtasks from './component/Showtasks.jsx';
+import LandingPage from './component/LandingPage.jsx';
 
 const router = createBrowserRouter([{
   path: '/',

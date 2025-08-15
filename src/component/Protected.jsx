@@ -12,7 +12,6 @@ const Protected = ({ Element }) => {
 
   return (
     <>
-      <Navbar />
       <Element />
     </>
   );

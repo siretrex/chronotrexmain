@@ -8,7 +8,6 @@ const Navbar = () => {
   const navigator = useNavigate();
   const logoutHandler = () => {
     dispatch(logout());
-    navigator('/')
   }
   return (
     <nav className="bg-gray-800 text-white px-4 py-3 flex justify-between items-center">
@@ -33,7 +32,7 @@ const Navbar = () => {
         </Link>
         <Link
           to="/logout"
-          onClick={() => dispatch(logout())}
+          onClick={logoutHandler}
           className="hover:text-gray-300 transition duration-200"
         >
           Logout

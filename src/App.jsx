@@ -11,7 +11,7 @@ function App() {
     <>
      <div className="w-full min-h-screen bg-gray-800  text-white flex flex-col">
           <div className="flex-1">
-            { userId ? <Navbar/> : <>check</>}
+            { !userId ? <></> : <Navbar/>}
             <Outlet/>
           </div>
           </div>
